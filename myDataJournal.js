@@ -55,6 +55,16 @@ function highestScreenTime(log) {
 }
 console.log(highestScreenTime(myDataJournal)) 
 
+function leastSleep(log) {
+    let fewestHours = 20;
+    for (let entry of log) {
+        if (entry.sleepHours < fewestHours) {
+            fewestHours = entry.sleepHours;
+        }
+    }
+    return fewestHours
+}
+console.log(leastSleep(myDataJournal))
 
 
 
